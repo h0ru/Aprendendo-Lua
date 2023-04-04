@@ -70,7 +70,7 @@ print("Lua " .. "é incrível)
 
 ### ✱ Operadores de comparação:
 ```
-  == igualdade
+  == Igualdade
   <  Menos que
   >  Maior que
   <= Menor ou igual a
@@ -114,4 +114,26 @@ if name ~= "Lua" then
   print("Não é Lua!")
 end
 ```
+
 ---
+
+### ✱ Funções:
+```
+-- Usando a palavra-chave function
+local function print_num(a)
+  print(a)
+end
+
+-- Usando uma expressão de função anônima
+local print_num = function(a)
+  print(a)
+end
+
+-- Chamando a função com o argumento 5
+print_num(5) -- Imprime 5
+
+-- Vários parâmetros
+function sum(a, b)
+  return a + b
+end
+```
