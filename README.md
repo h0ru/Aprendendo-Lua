@@ -31,3 +31,12 @@ print("Olá Mundo") --
 ```
 #### ✱ Usamos ```--``` para criar comentários.
 #### ✱ Usamos ```--[[ ]]``` para criar comentários com multilinhas.
+
+### ✱ Print com Lua:
+```
+print("Printando em Lua!")
+```
+#### ✱ O print de Lua é semelhante ao de Python ```print("")```
+#### ✱ Usar vírgula ```print("Olá mundo", Algo_aqui)``` servirá como "TAB"
+#### ✱ Usar ponto ponto ```print("Olá mundo" .. Algo_aqui)``` servirá como "+" no Python
+
