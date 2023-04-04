@@ -32,6 +32,8 @@ print("Olá Mundo") --
 #### ✱ Usamos ```--``` para criar comentários.
 #### ✱ Usamos ```--[[ ]]``` para criar comentários com multilinhas.
 
+---
+
 ### ✱ Print com Lua:
 ```
 print("Printando em Lua!")
@@ -40,3 +42,76 @@ print("Printando em Lua!")
 #### ✱ Usar vírgula ```print("Olá mundo", Algo_aqui)``` servirá como "TAB"
 #### ✱ Usar ponto ponto ```print("Olá mundo" .. Algo_aqui)``` servirá como "+" no Python
 
+---
+
+### ✱ Variáveis:
+```
+-- TIPOS
+local x = 100 -- Números 
+local linguagem = "Lua" -- String
+local melhor_linguagem = true -- Boolean
+local a = nil -- Sem valor ou valor inválido
+
+-- Incremento em números
+local n = 1
+n = n + 1
+print(n) -- 2
+
+-- Strings
+-- Concatenar strings
+local linguagem = "Lua"
+local qualidade = "é incrível"
+
+print(linguagem .. " " .. qualidade) -- Lua é incrível
+print("Lua " .. "é incrível)
+```
+
+---
+
+### ✱ Operadores de comparação:
+```
+  == igualdade
+  <  Menos que
+  >  Maior que
+  <= Menor ou igual a
+  >= Maior ou igual a
+  ~= Desigualdade
+```
+
+---
+
+### ✱ Declarando condicionais:
+```
+-- Comparação de números
+local idade = 20
+
+if idade > 18 then
+  print("Mais de 18") 
+end
+
+-- elseif e else
+idade = 20
+
+if idade > 18 then
+  print("Mais de 18")
+elseif idade == 18 then
+  print("Tem 18")
+else
+  print("De menor!")
+end
+
+-- Comparação de boolean
+local forte = true
+
+if forte then
+    print(É um monstro!")
+end
+
+-- Comparações de strings
+local linguagem = "Lua"
+
+if name ~= "Lua" then
+  print("Não é Lua!")
+end
+```
+---
