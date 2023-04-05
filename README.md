@@ -39,8 +39,8 @@ print("Olá Mundo") --
 print("Printando em Lua!")
 ```
 #### ✱ O print de Lua é semelhante ao de Python ```print("")```
-#### ✱ Usar vírgula ```print("Olá mundo", Algo_aqui)``` servirá como "TAB"
-#### ✱ Usar ponto ponto ```print("Olá mundo" .. Algo_aqui)``` servirá como "+" no Python
+#### ✱ Usar vírgula ```print("Olá mundo", Algo_aqui)``` servirá como "TAB".
+#### ✱ Usar ponto ponto ```print("Olá mundo" .. Algo_aqui)``` servirá como "+" no Python (Serve para concatenação).
 
 ---
 
@@ -190,4 +190,24 @@ for _, value in ipairs(cores) do
    print(value)
 end
 ```
+#### Dicionários
+```
+local info = { 
+   nome = "Lua",
+   idade = 30,
+   usual = true
+}
+
+-- Ambos imprimem Lua
+print(info["nome"])
+print(info.nome)
+
+-- Loop por pares
+for key, value in pairs(info) do
+   print(key .. " " .. tostring(value))
+end
+
+-- Imprime nome Lua, idade 30 etc
+```
+
 ---
