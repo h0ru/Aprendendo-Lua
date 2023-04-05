@@ -18,7 +18,6 @@
 ---
 
 ## 🌓 Aprendendo o Básico
-
 ### ✱ Comentando em Lua:
 ```
 -- 
@@ -211,3 +210,55 @@ end
 ```
 
 ---
+
+## 🌔 Módulos
+### ✱ Importe códigos e bibliotecas:
+#### ✱ Use ```require``` para carrecar bibliotecas
+```
+require("meu_modulo")
+  -- ou
+require "meu_modulo"
+
+-- Ambos fazem a mesma coisa
+```
+#### ✱ Exemplo de módulo ```modulo_teste.lua```
+```
+function função_teste( param )
+  print("Parâmetros aqui: " .. param)
+end
+```
+#### ✱ Exemplo de programa importando módulo ```programa_teste.lua```
+```
+require("modulo_teste")
+
+função_teste("Olá, módulo!")
+```
+
+---
+ 
+## 🌕 Parâmetros via linha de comando
+```
+-- Verifica se foi passado um argumento para o parâmetro nome
+if arg[1] ~= nil then
+  nome = arg[1] -- Atribui o valor do primeiro argumento para a variável nome
+else
+ nome = "Mundo" -- Define um valor padrão caso não seja passado um argumento
+end
+
+-- Imprime uma mensagem de boas-vindas com o nome passado ou o valor padrão
+print("Olá, " .. nome .. "!")
+
+-- Teria um resultado como: ./meu_script.lua Nome
+```
+
+---
+## 🌖 Ler entrada do usuário a partir do terminal
+```
+-- Imprime a mensagem "Seu nome aqui:" e lê a entrada do usuário
+io.write("Seu nome aqui: ")
+local nome = io.read()
+
+-- Imprime a mensagem "Seu nome é:" seguida do nome digitado pelo usuário
+print("Seu nome é: " .. nome)
+```
+
