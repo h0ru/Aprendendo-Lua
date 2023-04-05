@@ -137,3 +137,31 @@ function sum(a, b)
   return a + b
 end
 ```
+
+---
+
+### ✱ Loops:
+#### While
+```
+local i = 1
+
+while i <= 3 do
+   print("Olá")
+   i = i + 1
+end
+```
+#### For
+```
+for i = 1, 3 do
+   print("Olá")
+end
+```
+#### ✱ Ambos imprimem "Olá" 3 vezes
+
+---
+
+### ✱ Tabelas:
+```
+ -- As tabelas podem ser usadas para armazenar dados complexos.
+ -- Tipos de tabelas: arrays (listas) e dicts (chave, valor)
+```
