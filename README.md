@@ -165,3 +165,29 @@ end
  -- As tabelas podem ser usadas para armazenar dados complexos.
  -- Tipos de tabelas: arrays (listas) e dicts (chave, valor)
 ```
+#### Arrays
+```
+local cores = { "Azul", "Verde", "Vermelho" }
+
+print(cores[1]) -- Azul
+
+-- Diferentes maneiras de percorrer listas
+-- #cores é o comprimento da tabela
+
+for i = 1, #cores do
+  print(cores[i])
+end
+
+-- ipairs 
+for index, value in ipairs(cores) do
+   print(cores[index])
+   -- or
+   print(value)
+end
+
+-- Se você não usar índice ou valor aqui, poderá substituí-lo por "_"
+for _, value in ipairs(cores) do
+   print(value)
+end
+```
+---
