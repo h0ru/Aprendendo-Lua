@@ -235,8 +235,44 @@ função_teste("Olá, módulo!")
 ```
 
 ---
+
+## 🌕 Ler entrada do usuário a partir do terminal
+```
+-- Imprime a mensagem "Seu nome aqui:" e lê a entrada do usuário
+io.write("Seu nome aqui: ")
+local nome = io.read()
+
+-- Imprime a mensagem "Seu nome é:" seguida do nome digitado pelo usuário
+print("Seu nome é: " .. nome)
+```
+
+---
+
+## 🌖 Implemente a SHELL
+### ✱ É usado a biblioteca nativa ```os```:
+```
+-- Variáveis de ambiente:
+home = os.getenv("HOME")
+pwd = os.getenv("PWD")
+editor = os.getenv("EDITOR")
+
+print("Seu diretório pessoal é: " .. home)
+print("Você está no diretório: " .. pwd)
+print("Seu editor padrão é: " .. editor)
+
+-- Executando comandos:
+os.execute("echo 'Olá, Shell via Lua!'")
+os.execute("uptime")
+os.execute("touch file.txt")
+os.execute("ls")
+
+-- Removendo arquivos:
+os.remove("arquivo.txt")
+```
+
+---
  
-## 🌕 Parâmetros via linha de comando
+## 🌗 Parâmetros via linha de comando
 ```
 -- Verifica se foi passado um argumento para o parâmetro nome
 if arg[1] ~= nil then
@@ -252,13 +288,28 @@ print("Olá, " .. nome .. "!")
 ```
 
 ---
-## 🌖 Ler entrada do usuário a partir do terminal
-```
--- Imprime a mensagem "Seu nome aqui:" e lê a entrada do usuário
-io.write("Seu nome aqui: ")
-local nome = io.read()
 
--- Imprime a mensagem "Seu nome é:" seguida do nome digitado pelo usuário
-print("Seu nome é: " .. nome)
+## 🌘 Criar parâmetros com a biblioteca argparse
+```
+-- Importar a biblioteca argparse
+local argparse = require("argparse")
+
+-- Criar um objeto parser
+local parser = argparse("meu_script.lua", "Um exemplo de uso do argparse")
+
+-- Cria um argumento nomeado "-n" que recebe um valor
+parser:option("-n --nome", "Nome para exibir na mensagem de boas-vindas")
+
+-- Realiza o parsing dos argumentos passados via linha de comando
+local args = parser:parse()
+
+-- Recupera o valor passado para o parâmetro "-n"
+local nome = args.nome or "Mundo"
+
+-- Imprime a mensagem de boas-vindas com o nome passado ou o valor padrão
+print("Olá, " .. nome .. "!")
+
+-- Teria um resultado como: ./meu_script.lua -n Nome
 ```
 
+---
