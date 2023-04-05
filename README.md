@@ -313,3 +313,9 @@ print("Olá, " .. nome .. "!")
 ```
 
 ---
+
+## 🌙 Compile com LuaJIT
+### [𝙎𝙞𝙩𝙚 𝙊𝙛𝙞𝙘𝙞𝙖𝙡](https://luajit.org)
+#### Modo de uso: ```luajit programa.lua```
+
+---
